@@ -1,0 +1,12 @@
+File System Size Calculator
+
+A desktop file explorer manages individual File items
+(leaf nodes) and Directory containers that can hold both
+files and other sub-directories. You need to calculate
+total disk usage without writing separate logic for files
+versus folders.
+
+Task: Define a shared FileSystemElement interface with a
+getSize() method so calling getSize() on a top-level
+directory recursively calculates the combined size of
+all contained files and nested directories uniformly.

@@ -1,0 +1,8 @@
+Lazy-Loading High-Res Image Viewer
+
+An image gallery loads hundreds of high-resolution images from disk/network upfront,
+causing severe memory spikes and startup delays—even for images off-screen.
+
+Task: Implement an ImageProxy that stands in for the real image object. It serves a
+lightweight thumbnail immediately and delays fetching or instantiating the heavy
+HighResImage object until display() is explicitly invoked.

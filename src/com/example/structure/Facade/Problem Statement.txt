@@ -1,0 +1,10 @@
+Smart Home "Movie Night" System
+
+Triggering a home theater setup requires interacting with
+multiple distinct subsystems: dimming SmartLights, powering
+on the Projector, switching the SoundSystem to surround mode,
+and launching the StreamingDevice.
+
+Task: Create a HomeTheaterFacade class with high-level
+watchMovie(String title) and endMovie() methods that coordinate
+all underlying subsystems behind a simple interface.

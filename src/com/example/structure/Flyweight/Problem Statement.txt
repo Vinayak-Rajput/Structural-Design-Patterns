@@ -1,0 +1,12 @@
+High-Density Game Forest Renderer
+
+You are developing a open-world video game that needs to
+render a forest with 500,000 trees in real time. If each
+tree object independently allocates memory for its high-resolution
+3D mesh, textures, and color data alongside its X/Y coordinates,
+the app instantly crashes due to memory exhaustion.
+
+Task: Apply the Flyweight pattern to separate state into Intrinsic
+(shared heavy data: 3D mesh, texture) and Extrinsic (unique light data:
+X, Y, Z coordinates, height). Create a TreeTypeFactory that caches and
+reuses shared TreeType instances across all 500,000 rendered trees.

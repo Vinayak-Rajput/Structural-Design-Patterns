@@ -1,7 +1,10 @@
 Dynamic Coffee Shop Billing
 
-Your e-commerce app relies on a standard PaymentProcessor interface with a pay(double dollars) method.
-You need to integrate a third-party payment vendor whose SDK uses sendPayment(int cents, String currencyCode) instead.
+A coffee shop app sells base beverages (Espresso, DarkRoast).
+Customers can dynamically stack add-ons like Milk, Oat Milk,
+Espresso Shots, and Whipped Cream. Creating separate subclasses
+for every combination (DarkRoastWithMilkAndWhip) creates a class explosion.
 
-Task: Build an adapter class that implements PaymentProcessor and translates calls into the incompatible vendor SDK format
-      without altering either existing code base.
+Task: Design a base Beverage interface and wrap-around decorators for each
+ingredient so costs and descriptions accumulate dynamically at runtime (e.g.,
+new Whip(new OatMilk(new DarkRoast()))).
