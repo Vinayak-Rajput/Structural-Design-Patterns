@@ -1,0 +1,16 @@
+Multi-Format Report Exporters
+
+You are building an enterprise reporting engine.
+You have different types of reports (SummaryReport,
+DetailedAuditReport) and multiple delivery channels
+(EmailSender, SlackSender, SMSSender). If you use
+standard inheritance (SummaryEmailReport, SummarySlackReport,
+DetailedEmailReport...), creating M report types for N
+channels requires M times N classes, leading to class explosion.
+
+Task:
+Use the Bridge pattern to decouple the abstraction (Report)
+from the implementation (Sender).
+Define a Sender interface and bridge it inside an abstract Report
+class so any report can be delivered over any channel dynamically
+without creating sub-classes for every combination.
